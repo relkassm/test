@@ -5,22 +5,18 @@ export default function Counter() {
 
   return (
     <div>
-      <button
-        onClick={() => {
-          setCount(count - 1);
-        }}
-      >
-        decrease
+      <h2>Counter: {count}</h2>
+
+      <button onClick={() => setCount(count + 1)}>
+        Increase
       </button>
 
-      <p>{count}</p>
+      <button onClick={() => setCount(count - 1)}>
+        Decrease
+      </button>
 
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        increase
+      <button onClick={() => setCount(0)}>
+        Reset
       </button>
     </div>
   );
